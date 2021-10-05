@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/BallThatActuallyRolls.unity
+    path: Assets/Scenes/BallThatActuallyRolls.unity
     guid: 013256e0417ed934fb522cf52cc90d00
   m_configObjects: {}
