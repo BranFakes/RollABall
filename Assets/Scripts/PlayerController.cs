@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject winTextObject;
 
     private Rigidbody rb;
-    private int count;
+    public int count;
     private float movementX;
     private float movementY;
 
@@ -36,8 +36,6 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
-
         if(count >= 21)
         {
             winTextObject.SetActive(true);
@@ -50,11 +48,13 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
         rb.AddForce(movement * speed);
+
+        SetCountText();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PickUpCube"))
+        if (other.gameObject.tag == "PickUpCube")
         {
             other.gameObject.SetActive(false);
             count = count + 1;
