@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BallThatActuallyRolls.unity
     guid: 013256e0417ed934fb522cf52cc90d00
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 059def615dbccfb4b9b8fdb934466811
   m_configObjects: {}
