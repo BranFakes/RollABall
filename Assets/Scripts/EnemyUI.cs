@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.AI;
 public class EnemyUI : MonoBehaviour
 {
 
     public Transform Player;
-    int MoveSpeed = 4;
-    int MaxDist = 10;
-    int MinDist = 5;
+    int MoveSpeed = 2;
+    int MaxDist = 100;
+    int MinDist = 100;
 
 
 

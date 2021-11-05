@@ -3,35 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public int nextScene;
-    private int currentScene;
-
-
-    public void LoadNextlevel()
+    public GameObject Player;
+    private void OnTriggerEnter(Collider other)
     {
-        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-
-        if (nextScene <= 1)
+        if(other.gameObject == Player)
         {
-            SceneManager.LoadScene(nextScene);
+         SceneManager.LoadScene(1);
         }
-
-        else if (nextScene >= 2)
-        {
-            Debug.Log("All levels complete!");
-        }
-    }
-
-
-    public void ReloadCurrentScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+       
     }
 }
