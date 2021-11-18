@@ -6,7 +6,7 @@ public class EnemyUI : MonoBehaviour
 {
 
     public Transform Player;
-    int MoveSpeed = 2;
+    int MoveSpeed = 3;
     int MaxDist = 100;
     int MinDist = 100;
 
